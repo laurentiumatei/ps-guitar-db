@@ -78,7 +78,7 @@ public class ModelPersistenceTests {
 	
 	@Test
 	public void testGetModelsByTypes() throws Exception {		
-		List<Model> mods = modelJpaRepository.findByModelTypeNameIn(Arrays.asList("Electric", "Acoustic", "Bass"));
+		List<Model> mods = modelJpaRepository.findByModelTypeNameIn(Arrays.asList("Electric", "Acoustic"));
 		
 		mods.forEach(model -> {
 			assertTrue(model.getModelType().getName().equals("Electric") || model.getModelType().getName().equals("Electric")) ;
